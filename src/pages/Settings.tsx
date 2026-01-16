@@ -152,7 +152,12 @@ export const Settings: React.FC = () => {
     try {
       const data = await file.arrayBuffer();
       const workbook = XLSX.read(data);
-      const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+      const sheetName = workbook.SheetNames[0];
+      if (!sheetName) {
+        setError('Excel-filen inneholder ingen ark');
+        return;
+      }
+      const worksheet = workbook.Sheets[sheetName];
       
       // Expected columns: Navn, Virkestoff, Halveringstid (timer), Standarddose (mg), Notater
       const jsonData = XLSX.utils.sheet_to_json<{

@@ -61,7 +61,11 @@ export const DrugLibrary: React.FC = () => {
       if (selectedDrug?.id) {
         await updateDrug(selectedDrug.id, drugData);
       } else {
-        await addDrug(drugData);
+        await addDrug({
+          ...drugData,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        });
       }
       setError(null);
     } catch (err) {

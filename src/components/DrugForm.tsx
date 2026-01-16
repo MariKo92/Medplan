@@ -119,8 +119,6 @@ export const DrugForm: React.FC<DrugFormProps> = ({
         halfLifeHours: parseFloat(halfLifeHours),
         standardDoseMg: parseFloat(standardDoseMg),
         notes: notes.trim(),
-        createdAt: new Date(),
-        updatedAt: new Date(),
       });
       onClose();
     } catch (error) {
