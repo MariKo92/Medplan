@@ -158,6 +158,10 @@ export const Settings: React.FC = () => {
         return;
       }
       const worksheet = workbook.Sheets[sheetName];
+      if (!worksheet) {
+        setError('Kunne ikke lese Excel-arket');
+        return;
+      }
       
       // Expected columns: Navn, Virkestoff, Halveringstid (timer), Standarddose (mg), Notater
       const jsonData = XLSX.utils.sheet_to_json<{
