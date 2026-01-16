@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Nedtrappingsplan-for-medikamenter/',
+  base: '/medplan/',
   server: {
     port: 3000,
   },
