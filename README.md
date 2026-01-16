@@ -1,6 +1,8 @@
 # Beslutningsstøtte MVP
 
-Medical decision-support tool for tapering schedule calculations.
+> Privacy-first medical decision support tool for calculating drug tapering schedules with multi-drug support, interaction risk assessment, and local-only data storage.
+
+A production-ready React + TypeScript application that helps healthcare professionals create scientifically-based medication tapering plans. All data stored locally in IndexedDB - no backend, no cloud, no PII collection.
 
 ## ⚠️ Disclaimer
 

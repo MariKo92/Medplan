@@ -1,6 +1,7 @@
 {
   "name": "beslutningsstotte",
   "version": "0.1.0",
+  "description": "Privacy-first medical decision support tool for calculating drug tapering schedules. Local-only React app with IndexedDB storage, no backend required.",
   "type": "module",
   "private": true,
   "scripts": {
